@@ -1,4 +1,4 @@
-package Utils;
+package extentreport;
 
 public class test {
 }
