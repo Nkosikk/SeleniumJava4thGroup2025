@@ -8,3 +8,5 @@ This is a sample Selenium Java framework using TestNG and Maven for automated te
 1. Clone the repository:
    ```bash
    git clone
+   
+## Nkosi new changes
