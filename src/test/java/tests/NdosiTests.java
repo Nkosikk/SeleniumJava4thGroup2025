@@ -9,4 +9,10 @@ public class NdosiTests extends Base {
         homePage.verifyHomePageIsDisplayed();
     }
 
+    @Test(dependsOnMethods = "verifyHomePageIsDisplayedTests")
+    public void clickLearningMaterialTests() {
+        homePage.clickLearningMaterial();
+    }
+
+
 }
