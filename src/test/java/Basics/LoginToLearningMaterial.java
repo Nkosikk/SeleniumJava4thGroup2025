@@ -15,12 +15,13 @@ public class LoginToLearningMaterial {
 
     @BeforeTest
     public void launchBrowser() {
+
         driver = new ChromeDriver();
     }
 
     @Test
     public void startBrowser() throws InterruptedException {
-        driver.get("www.ndosiautomation.co.za");
+        driver.get("https://gray-island-0bd788c1e.2.azurestaticapps.net/#practice");
         driver.manage().window().maximize();
         Thread.sleep(2000);
 
