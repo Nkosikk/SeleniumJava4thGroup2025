@@ -25,13 +25,13 @@ public class NdosiTests extends Base{
     @Test(priority = 3)
     public void enterEmailTests() {
         // Test code to enter email
-        loginPage.enterEmail("yonelabanjwa10@gmail.com");
+        loginPage.enterEmail("yoyo@gmail.com");
     }
 
     @Test(priority = 4)
     public void enterPasswordTests() {
         // Test code to enter password
-        loginPage.enterPassword("Yongama2007");
+        loginPage.enterPassword("Yoyo2007");
     }
 
     @Test(priority = 5)
@@ -39,4 +39,5 @@ public class NdosiTests extends Base{
         // Test code to click login button
         loginPage.clickLoginButton();
     }
+
 }
