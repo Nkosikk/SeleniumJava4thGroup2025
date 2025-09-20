@@ -19,8 +19,6 @@ public class BrowserFactory {
         } else if (browserChoice.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
         } else {
-            //System.out.println("Browser not supported. Please choose Chrome, Firefox, or Edge.");
-            //return null;
             driver = new SafariDriver();
         }
         driver.manage().window().maximize();

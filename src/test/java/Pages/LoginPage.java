@@ -29,11 +29,11 @@ public class LoginPage {
     }
 
     public void enterEmail(String email) {
-        email_id.sendKeys("yoyo@gmail.com");
+        email_id.sendKeys(email);
     }
 
     public void enterPassword(String password) {
-        password_id.sendKeys("Yoyo2007");
+        password_id.sendKeys(password);
     }
 
     public void clickLoginButton() {
