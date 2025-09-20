@@ -3,10 +3,14 @@ package Basics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class LoginToLearningMaterial {
 
@@ -20,7 +24,7 @@ public class LoginToLearningMaterial {
 
     @Test
     public void startBrowser() throws InterruptedException {
-        driver.get("www.ndosiautomation.co.za");
+        driver.get("https://www.ndosiautomation.co.za");
         driver.manage().window().maximize();
         Thread.sleep(2000);
 
@@ -40,18 +44,22 @@ public class LoginToLearningMaterial {
     }
 
 
-    @Test(dependsOnMethods = "clickLearningMaterial")
-    public void verifyloginDisplayed() throws InterruptedException {
-        String Login = driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/h2/span")).getText();
 
-        Assert.assertEquals(Login,"Access Learning Materials");
-        System.out.println("The printed text is " +Login);
-        Thread.sleep(2000);
+    @Test(dependsOnMethods = "clickLearningMaterial")
+    public void verifyloginDisplayed() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        // Wait for the span with the expected text
+        String loginText = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//span[contains(text(),'Access Learning Materials')]")
+        )).getText();
+
+        Assert.assertEquals(loginText, "Access Learning Materials");
+        System.out.println("The printed text is " + loginText);
     }
 
     @Test(dependsOnMethods = "verifyloginDisplayed")
     public void enterUsername() throws InterruptedException {
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/section/div/input[1]")).sendKeys("njc@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"login-email\"]")).sendKeys("njc@gmail.com");
         Thread.sleep(2000);
     }
 
