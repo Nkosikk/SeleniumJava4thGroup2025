@@ -14,5 +14,15 @@ public class NdosiTests extends Base {
         homePage.clickLearningMaterial();
     }
 
+    @Test(dependsOnMethods = "clickLearningMaterialTests")
+    public void verifyLoginPageIsDisplayedTests() {
+        loginPage.verifyLoginPageIsDisplayed();
+    }
 
+    @Test(dependsOnMethods = "verifyLoginPageIsDisplayedTests")
+    public void enterEmailAddressTests() {
+        loginPage.enterEmailAddress("makes@gmail.com");
+
+
+    }
 }
