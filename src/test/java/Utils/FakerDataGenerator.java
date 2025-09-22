@@ -8,7 +8,7 @@ public class FakerDataGenerator {
     static Faker faker = new Faker();
 
     public static String firstName =faker.name().firstName();
-    public static String adress =faker.address().cityName();
+    public static String address =faker.address().cityName();
     public static String surname =faker.name().lastName();
 
 
