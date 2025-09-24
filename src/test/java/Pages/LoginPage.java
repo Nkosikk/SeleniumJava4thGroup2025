@@ -40,4 +40,20 @@ public class LoginPage {
         loginButton_id.click();
     }
 
+    public String getAlertText() {
+       try {
+         return driver.switchTo().alert().getText();
+       } catch (Exception e) {
+           return null;
+        }
+    }
+
+    public void acceptAlert() {
+        try {
+            driver.switchTo().alert().accept();
+        } catch (Exception e) {
+            //No alert present
+        }
+    }
+
 }

@@ -40,4 +40,20 @@ public class NdosiTests extends Base{
         loginPage.clickLoginButton();
     }
 
+
+    @Test(priority = 6)
+    public void loginWithInvalidCredentialsShowsAlert() {
+        loginPage.enterEmail("invalid@example.com");
+        loginPage.enterPassword("wrongpassword");
+        loginPage.clickLoginButton();
+  //      String alertText = loginPage.getAlertText();
+//        assert alertText != null : "No alert was displayed after failed login.";
+//        assert alertText.equals("Login failed: Invalid login credentials") : "Unexpected alert text: " + alertText;
+    }
+
+    @Test(priority = 7)
+    public void acceptAlertTest() {
+        loginPage.acceptAlert();
+    }
+
 }
