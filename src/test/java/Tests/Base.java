@@ -3,6 +3,7 @@ package Tests;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Utils.BrowserFactory;
+import Utils.ReadFromExcel;
 import Utils.TakesScreenshots;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -15,4 +16,13 @@ public class Base {
     LoginPage loginPage= PageFactory.initElements(driver, LoginPage.class);
 
     TakesScreenshots takesScreenshots = new TakesScreenshots();
+
+    ReadFromExcel readFromExcel;
+    {
+        try{
+            readFromExcel= new ReadFromExcel();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
