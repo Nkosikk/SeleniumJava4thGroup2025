@@ -23,7 +23,7 @@ public class NdosiTests extends Base {
 
     @Test(dependsOnMethods = "verifyLoginPageIsDisplayedTests")
     public void enterEmailAddressTests() {
-        loginPage.enterEmailAddress(" makes@gmail.com            ");
+        loginPage.enterEmailAddress(readFromExcel.username);
 
     }
 

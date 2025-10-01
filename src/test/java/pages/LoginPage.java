@@ -10,7 +10,7 @@ public class LoginPage {
 
     @FindBy(id = "login-heading")
     WebElement loginPageTitle_id;
-    @FindBy(id = "login-emailNkosi")
+    @FindBy(id = "login-email")
     WebElement emailField_id;
 
     public LoginPage(WebDriver driver) {
