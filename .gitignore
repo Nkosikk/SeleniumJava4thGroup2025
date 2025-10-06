@@ -2,7 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/Basics.LoginToLearningMaterial/**/target/
-
+test-output/
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
@@ -20,7 +20,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
+Reports/
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -33,6 +33,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
+Screenshots/
 ### Mac OS ###
 .DS_Store
