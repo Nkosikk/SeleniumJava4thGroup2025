@@ -8,7 +8,7 @@ public class NdosiTests extends Base {
     @Test
     public void verifyHomePageIsDisplayedTests() {
         homePage.verifyHomePageIsDisplayed();
-        takesScreenshots.takesSnapShot(driver, "Home Page");
+        takesScreenshots.takesSnapShot(driver, "Home Page Is Displayed");
     }
 
 

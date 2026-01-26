@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "records": [
+    {
+      "filePath": "/Users/avelanoganta/Documents/AvelaNoganta/KKAutomation/gitclones/SeleniumJava4thGroup2025/src/test/java/Tests/NdosiTests.java",
+      "timestamp": 1769448514828,
+      "startOffset": 309,
+      "endOffset": 842,
+      "codeContent": "\n//    @Test(dependsOnMethods \u003d \"verifyHomePageIsDisplayedTests\")\n//    public void clickLearningMaterialTests() {\n//        homePage.clickLearningMaterial();\n//    }\n//\n//    @Test(dependsOnMethods \u003d \"clickLearningMaterialTests\")\n//    public void verifyLoginPageIsDisplayedTests() {\n//        loginPage.verifyLoginPageIsDisplayed();\n//    }\n//\n//    @Test(dependsOnMethods \u003d \"verifyLoginPageIsDisplayedTests\")\n//    public void enterEmailAddressTests() {\n//        loginPage.enterEmailAddress(readFromExcel.username);\n//\n//    }\n//",
+      "aiProbability": 90,
+      "aiTool": "GitHub Copilot",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 17
+    }
+  ],
+  "toolStats": {
+    "GitHub Copilot": {
+      "usageCount": 1,
+      "totalLines": 17
+    }
+  }
+}
