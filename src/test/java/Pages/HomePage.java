@@ -16,7 +16,7 @@ public class HomePage {
     @FindBy(id = "overview-section")
     WebElement homePageTitle_id;
 
-    @FindBy(id = "nav-btn-practice")
+    @FindBy(xpath = "//button[@class= 'user-pill']")
     WebElement learningMaterialButton_id;
 
 
